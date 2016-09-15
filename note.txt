@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX_CLOS 20
+//#include,#define称为预处理指令 preprocessor directives
+
+printf
+%d 	以十进制打印一个整型值
+%o 	以八进制打印一个整型值
+%x 	以十六进制打印一个整型值
+%g 	打印一个浮点值
+%c 	打印一个字符
+%s 	打印一个字符串
+\n 	换行
+
+scanf
+%d 	读取一个整型值
+%ld 读取一个长整型值
+%f	读取一个实型值(浮点数)
+%lf	读取一个双精度实型值
+%c 	读取一个字符
+%s 	从输入中读取一个字符串
+
+ch=getchar();
+while(ch!=EOF && ch != '\n') ch = getchar();
+
+for语句更像是while语句的一种常用风格的简写法
+for(初始部分;测试部分;调整部分)
+初始部分：只在循环开始前执行一次
+测试部分：在循环每执行一次后都要执行一次
+调整部分：在每次循环执行完毕后都要执行一次，但是它在测试部分之前执行
