@@ -1,0 +1,21 @@
+当循环体只有遇到某些值才会执行的情况下，continue语句相当有用
+
+for语句执行continue后，会直接回到调整部分；
+但是while语句中执行continue，会跳过调整部分，因为调整部分是循环体的一部分；
+while中执行continue会直接回到条件部分
+
+当你需要循环体至少执行一次时，选择do
+
+continue在switch中没有任何效果，除非switch被镶嵌在某个循环中，这时continue后，相当于对这个循环进行continue
+
+switch语句中写上defult是个好习惯
+
+switch语句中case如果没有break，可能会让人怀疑是否bug出现在那里，从而进行错误的修复，这时可以在每个没有break的case后添加特定的注释来避开怀疑
+
+goto swap;//在那里都能用goto去转到有标签的语句
+swap://打上标签，后边加冒号
+goto swap;//在那里都能用goto去转到有标签的语句
+//在一般情况下，我们应该避免goto语句
+
+C并不具备任何输入/输出语句；I/O是通过调用库函数实现的。
+C也不具备任何处理异常处理的语句，它们也是通过调用库函数来完成的。
