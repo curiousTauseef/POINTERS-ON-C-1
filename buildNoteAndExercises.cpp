@@ -27,9 +27,9 @@ string numToString(int it)
 int main()
 {
 	int chapter, numOfPractice;
-	cout << "输入章节:";
+	cout << "Input your chapter:";
 	cin >> chapter;
-	cout << "输入题目数量:";
+	cout << "Input how many exercises you need to write:";
 	cin >> numOfPractice;
 	string prefix = "copy nul " + numToString(chapter) + ".";
 	string note = prefix + "note.txt";
