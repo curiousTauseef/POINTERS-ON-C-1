@@ -1,0 +1,31 @@
+传递函数参数的两个规则
+1.传递给函数的标量参数的传值调用的。
+2.传递给函数的数组参数在行为上就像它们是通过传址调用的那样。
+
+如果一个递归函数内部所执行的最后一条语句就是调用自身时，那么它就被称为尾部递归。
+尾部递归可以很容易地改写为循环的形式，它的效率通常更高一些。
+
+有些函数的参数列表包含可变的参数数量和类型，它们可以使用stdarg.h头文件所定义的宏来实现。
+
+<stdarg.h>声明了一个类型va_list和三个宏--va_start,va_arg,va_end.
+可以声明一个类型为va_list的变量，与这几个宏配合使用,访问参数的值。
+va_arg : 用于访问参数列表的未确定部分。通过调用va_start来初始化。
+
+可变参数必须从头到尾按照顺序逐个访问.
+$include<stdarg.h>
+float averge(int n_values,...)
+{
+	va_list var_arg;//声明va_list类型的一个变量.
+	int count;
+	float sum=0;
+	va_start(var_arg,n_values);//准备访问可变参数
+	for(count = 0;count < n_values;count += 1) {
+		sum+=va_arg(va_arg,int);
+	}
+	va_end(va_arg);//完成处理可变参数
+	return sum/n_values;
+}
+
+缺点：
+1.这些宏无法判断实际存在的参数的数量。
+2.这些宏无法判断每个参数的类型。
