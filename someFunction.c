@@ -41,6 +41,23 @@ char int_to_char(int temp)
 {
 	return temp+48;
 }
+
+template<typename T>
+T lowbit(T k)
+{
+	return k&-k;
+}
+
+template<typename T>
+ostream &operator<<(ostream &os, const vector <T> &it)
+{
+	for (int i = 0; i < it.size(); i++)
+	{
+		cout << it[i] << " ";
+	}
+	cout << endl;
+}
+
 ostream &operator<<(ostream &os, const vector<vector <int>> &it)
 {
 	for (int i = 0; i < it.size(); i++)
